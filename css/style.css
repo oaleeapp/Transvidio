@@ -97,8 +97,9 @@ p{
 
 .header{
 	text-align:center;
-  background-color: rgba(0,0,0,0);
+  background-color: rgba(0,0,0,0.5);
   padding:120px 0;
+  position: relative;
 }
 .logo{
 	width:130px;
@@ -189,6 +190,7 @@ color: #fff;
 .main-nav li{
 	display:inline;
 	margin:0 1px;
+  position:relative;
 }
 .main-nav li a{
 	display:inline-block;
