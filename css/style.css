@@ -98,7 +98,7 @@ p{
 .header{
 	text-align:center;
   background-color: rgba(0,0,0,0.5);;
-  padding:280px 0;
+  padding:120px 0;
 }
 .logo{
 	width:130px;
@@ -615,7 +615,7 @@ border: 2px solid #fff;
 }
 
 .main-section.contact{
-	background:url(../img/bg-map.png) left 190px no-repeat;
+	/*background:url(../img/bg-map.png) left 190px no-repeat;*/
 }
 .contact-info-box{
 	font-size:15px;
