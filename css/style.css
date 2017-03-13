@@ -97,7 +97,7 @@ p{
 
 .header{
 	text-align:center;
-  background-color: rgba(0,0,0,0.5);;
+  background-color: rgba(0,0,0,0);
   padding:120px 0;
 }
 .logo{
@@ -215,6 +215,7 @@ color: #fff;
 .main-section{
 	padding:90px 0 110px;
   background-color: white;
+  position: relative;
 }
 
 
@@ -775,15 +776,24 @@ border: 2px solid #fff;
 .footer{
 	background-color: grey;
 	padding:35px 0 35px;
+  position: relative;
 }
 .footer-logo{
 	margin:15px auto 35px;
 	width: 76px;
 }
-.copyright, .credits{
+
+.copyright{
 	color:#cccccc;
 	font-size:14px;
-	display:block;
+	display: block;
+	text-align:center;
+}
+
+.credits{
+	color:#cccccc;
+	font-size:10px;
+	display: block;
 	text-align:center;
 }
 .copyright a, .credits a{
@@ -871,26 +881,32 @@ border: 2px solid #fff;
 }
 
 
-video {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -100;
-    transform: translateX(-50%) translateY(-50%);
- background: url('video/Black_Keys.jpg') no-repeat;
-  background-size: cover;
-  transition: 1s opacity;
-}
+/*.video-responsive {
+	padding-bottom: 56.25%;
+	position: relative;
+	width: 100%;
+}*/
 
+.canvas,
+.video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  transform: translateX(-50%) translateY(-50%);
+background: #000 no-repeat;
+background-size: cover;
+transition: 1s opacity;
+}
 
 @media screen and (max-width: 500px) {
   div{width:70%;}
 }
 @media screen and (max-device-width: 800px) {
-  html { background: url(video/Black_Keys.jpg) #000 no-repeat center center fixed; }
+  html { background: #000 no-repeat center center fixed; }
   #bgvid { display: none; }
 }

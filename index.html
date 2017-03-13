@@ -37,11 +37,15 @@
 
 </head>
 <body>
-	<video poster="video/Black_Keys.jpg" id="bgvid" playsinline autoplay muted loop>
-  <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
-		<source src="video/Black_Keys.webm" type="video/webm">
-		<source src="video/Black_Keys.mp4" type="video/mp4">
-	</video>
+	<div class="video-responsive">
+			<video class="video" poster="video/Black_Keys.jpg" muted="muted" loop="loop" autoplay="autoplay">
+				<source src="video/Black_Keys.mp4" type="video/mp4">
+				<source src="video/Black_Keys.webm" type="video/webm">
+				Your browser does not support HTML5 video.
+			</video>
+
+			<canvas class="canvas"></canvas>
+	</div>
 
 <header class="header" id="header"><!--header-start-->
 
@@ -364,15 +368,17 @@ we were well fed and drunk all the time!</p>
     <div class="container">
         <div class="footer-logo"><a href="#"><img src="img/PageProtrait.png" alt=""></a></div>
         <span class="copyright">&copy; Transvidio. All Rights Reserved</span>
-        <div class="credits">
+        <span class="credits">
             <!--
                 All the links in the footer should remain intact.
                 You can delete the links only if you purchased the pro version.
                 Licensing information: https://bootstrapmade.com/license/
                 Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Knight
             -->
-            <a style="color:rgba(0,0,0,0.5);" href="https://bootstrapmade.com/free-business-bootstrap-themes-website-templates/">Business Bootstrap Themes</a> by <a style="color:rgba(0,0,0,0.5);" href="https://bootstrapmade.com/">BootstrapMade</a>
-        </div>
+            <a style="color:rgba(0,0,0,0.5);" href="https://bootstrapmade.com/free-business-bootstrap-themes-website-templates/">Business Bootstrap Themes</a>
+						<p>by</p>
+						<a style="color:rgba(0,0,0,0.5);" href="https://bootstrapmade.com/">BootstrapMade</a>
+        </span>
     </div>
 </footer>
 
@@ -464,6 +470,33 @@ $(window).load(function(){
     });
 
 });
+
+</script>
+
+
+<script src="js/canvas-video-player.js"></script>
+<script>
+
+var isIOS = /iPad|iPhone|iPod|android|blackberry/.test(navigator.platform);
+
+if (isIOS) {
+
+    var canvasVideo = new CanvasVideoPlayer({
+        videoSelector: '.video',
+        canvasSelector: '.canvas',
+        timelineSelector: false,
+        autoplay: true,
+        makeLoop: true,
+        pauseOnClick: false,
+        audio: false
+    });
+
+}else {
+
+    // Use HTML5 video
+    document.querySelectorAll('.canvas')[0].style.display = 'none';
+
+}
 
 </script>
 
