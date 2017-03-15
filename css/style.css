@@ -108,6 +108,7 @@ p{
 }
 .logo{
 	width:260px;
+  height: auto;
 	margin:0 auto 35px;
 }
 .header h1{

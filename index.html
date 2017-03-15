@@ -37,9 +37,17 @@
 
 </head>
 <body>
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.8&appId=1022065911182509";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
 	<div class="video-responsive">
 			<video class="video" poster="video/Black_Keys.jpg" muted="muted" loop="loop" autoplay="autoplay">
-				<source src="video/VideoWallPolygon.mp4" type="video/mp4">
+				<source src="video/Black_Keys.mp4" type="video/mp4">
 				<source src="video/Black_Keys.webm" type="video/webm">
 				Your browser does not support HTML5 video.
 			</video>
@@ -58,7 +66,7 @@
         	<li></li>
         </ul>
 
-						<button href="#contact" class="btn input-btn">Get Started</button>
+					<a class="link animated fadeInUp delay-1s servicelink btn input-btn" href="#contact">Get Started</a>
     </div>
 </header><!--header-end-->
 
@@ -107,6 +115,32 @@
 						<button type="submit" name="submit" id="mc-embedded-subscribe" class="btn input-btn">Try it!</button>
 					</form>
 				</div>
+				<div class="row">
+					<script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '95100348886',
+          xfbml      : true,
+          version    : 'v2.6'
+        });
+      };
+
+      (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+    <div class="fb-messengermessageus"
+         messenger_app_id="95100348886"
+         page_id="Transvid.io"
+         color="blue"
+         size="large">
+    </div>
+				</div>
 			</div>
 		</div>
 
@@ -115,7 +149,15 @@
 
 <footer class="footer">
     <div class="container">
+
         <div class="footer-logo"><a href="#"><img src="img/logoWeb.png" alt=""></a></div>
+				<div
+				  class="fb-like"
+				  data-share="true"
+				  data-width="450"
+				  data-show-faces="true">
+				</div>
+				<div class="fb-send" data-href="https://www.facebook.com/Transvid.io"></div>
         <span class="copyright">&copy; Transvidio 2017 All Rights Reserved</span>
         <span class="credits">
             <!--
@@ -247,6 +289,37 @@ if (isIOS) {
 
 }
 
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-89977536-3', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1332567746791493',
+      xfbml      : true,
+      version    : 'v2.8'
+    });
+    FB.AppEvents.logPageView();
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
 </script>
 
 </body>
