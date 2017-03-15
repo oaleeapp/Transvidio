@@ -153,7 +153,7 @@ color: #fff;
 .link{
 	padding:15px 35px;
 	background:var(--main-color);
-	color:#fff !important;
+	color:#111;
 	font-size:16px;
 	font-weight:400;
 	font-family: 'Montserrat', sans-serif;
@@ -168,7 +168,7 @@ color: #fff;
 }
 .link:hover {
 	text-decoration:none;
-	color:var(--main-color) !important;
+	color:var(--main-color) ;
 	background:#fff;
 }
 
@@ -730,7 +730,7 @@ border: 2px solid #fff;
 	height:50px;
 	background:var(--main-color);
 	border-radius:4px;
-	color:#ffffff;
+	color:#111;
 	font-size:14px;
 	text-transform:uppercase;
 	font-family: 'Montserrat', sans-serif;
@@ -743,7 +743,7 @@ border: 2px solid #fff;
 
 .input-btn:hover{
 	background: #111;
-	color: #fff;
+	color: var(--main-color);
 }
 
 .validation {
