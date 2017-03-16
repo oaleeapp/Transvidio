@@ -26,7 +26,7 @@
 <script type="text/javascript" src="js/jquery.isotope.js"></script>
 <script type="text/javascript" src="js/wow.js"></script>
 <script type="text/javascript" src="js/classie.js"></script>
-<script src="contactform/contactform.js"></script>
+
 
 <!-- =======================================================
     Theme Name: Knight
@@ -110,9 +110,9 @@
 		<div id="mc_embed_signup">
 			<div class="container">
 				<div class="row">
-					<form role="form" action="" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate="" class="col-sm-offset-3 col-sm-6 col-xs-offset-1 col-xs-10 form-group">
-						<input type="email" name="EMAIL" class="form-control input-text" id="mce-EMAIL" placeholder="Email address...">
-						<button type="submit" name="submit" id="mc-embedded-subscribe" class="btn input-btn">Try it!</button>
+					<form novalidate class="col-sm-offset-3 col-sm-6 col-xs-offset-1 col-xs-10 form-group">
+						<input type="email" class="form-control input-text" id="email" placeholder="Email address...">
+						<button type="submit" id="summitButton" class="btn input-btn">Try it!</button>
 					</form>
 				</div>
 				<div class="row">
@@ -321,6 +321,21 @@ if (isIOS) {
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
 </script>
+
+<script src="https://www.gstatic.com/firebasejs/3.7.2/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBaj5-gez4dlQSemSot7_Ob6-FxfIweM0A",
+    authDomain: "transvidio.firebaseapp.com",
+    databaseURL: "https://transvidio.firebaseio.com",
+    storageBucket: "transvidio.appspot.com",
+    messagingSenderId: "540749400533"
+  };
+  firebase.initializeApp(config);
+</script>
+
+<script type="text/javascript" src="js/contact.js"></script>
 
 </body>
 </html>
